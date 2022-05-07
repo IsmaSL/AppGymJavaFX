@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1250.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gymapp.Controller.DashboardController">
+    <stylesheets>
+        <URL value="@/gymapp/View/css/dashboard.css" />
+    </stylesheets>
+    <children>
+        <GridPane accessibleRole="DATE_PICKER" layoutX="428.0" layoutY="74.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="1200.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="560.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1A1A1A;" />
+                <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1A1A1A;" GridPane.columnIndex="1">
+                    <children>
+                        <Label layoutY="20.0" text="GYM" textFill="#fff700">
+                            <font>
+                                <Font name="Noto Serif Bold" size="42.0" />
+                            </font>
+                        </Label>
+                        <Button alignment="CENTER" layoutX="1100.0" layoutY="33.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #FFF700; -fx-border-color: #FFF; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Salir" textAlignment="CENTER" textFill="#1a1a1a">
+                            <font>
+                                <Font name="Arial" size="16.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </Pane>
+                <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1A1A1A;" GridPane.columnIndex="2" />
+                <TabPane style="-fx-background-color: #F6F6F6;" tabMaxHeight="30.0" tabMaxWidth="150.0" tabMinHeight="30.0" tabMinWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <tabs>
+                        <Tab closable="false" text="Usuarios">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                            </content>
+                            <content>
+                                <GridPane style="-fx-background-color: #ECECEC;">
+                                    <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="15.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="150.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="15.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="15.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="345.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="15.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                           <children>
+                              <TableView prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFF; -fx-border-color: #5e5e5e; -fx-border-width: 1px; -fx-padding: 3px;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                <columns>
+                                  <TableColumn maxWidth="50.0" minWidth="50.0" prefWidth="50.0" resizable="false" text="ID" />
+                                  <TableColumn maxWidth="140.0" minWidth="140.0" prefWidth="140.0" resizable="false" text="Nombre(s)" />
+                                    <TableColumn maxWidth="140.0" minWidth="140.0" prefWidth="140.0" text="Apellido Paterno" />
+                                    <TableColumn maxWidth="140.0" minWidth="140.0" prefWidth="140.0" text="Apellido Materno" />
+                                    <TableColumn maxWidth="90.0" minWidth="90.0" prefWidth="90.0" text="F. Inscripción" />
+                                    <TableColumn maxWidth="80.0" minWidth="80.0" text="Estado" />
+                                </columns>
+                              </TableView>
+                              <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#btnMostrarAgregar" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: #1A1A1A; -fx-border-color: #FFF; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Agregar" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Arial" size="16.0" />
+                                       </font>
+                                    </Button>
+                                    <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: #1A1A1A; -fx-border-color: #FFF; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Refrescar" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Arial" size="16.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                    </Button>
+                                    <Label text="Ver:">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="cbxVerTipoUsuario" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" promptText="Seleccionar...">
+                                       <GridPane.margin>
+                                          <Insets left="40.0" />
+                                       </GridPane.margin>
+                                    </ComboBox>
+                                    <Separator maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1.0" prefWidth="135.0" style="-fx-background-color: #a8a8a8;" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <ImageView fitHeight="476.0" fitWidth="344.0" pickOnBounds="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <image>
+                                    <Image url="@images/02_ban.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Accordion fx:id="acordeon" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="345.0" style="-fx-border-color: #a8a8a8; -fx-padding: 5px; -fx-background-color: #ECECEC;" visible="false" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                <panes>
+                                  <TitledPane fx:id="paneDetalles" style="-fx-label-padding: 2px;" text="Detalles" underline="true">
+                                       <content>
+                                          <GridPane style="-fx-background-color: #F6F6F6;">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="6.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="10.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" vgrow="SOMETIMES" />
+                                                <RowConstraints vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="42.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="10.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label text="Nombre:" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="txtNombre" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" promptText="Juanito Bautista" style="-fx-background-color: FFF; -fx-border-color: a8a8a8;" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets left="3.0" />
+                                                   </padding>
+                                                </TextField>
+                                                <Label layoutX="20.0" layoutY="20.0" text="Apellido Paterno:" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="txtApPaterno" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" promptText="Escutia" style="-fx-background-color: FFF; -fx-border-color: a8a8a8;" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets left="3.0" />
+                                                   </padding>
+                                                </TextField>
+                                                <Label layoutX="20.0" layoutY="20.0" text="Apellido Materno:" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="txtApMaterno" layoutX="20.0" layoutY="41.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" promptText="Martínez" style="-fx-background-color: FFF; -fx-border-color: a8a8a8;" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets left="3.0" />
+                                                   </padding>
+                                                </TextField>
+                                                <Label layoutX="20.0" layoutY="80.0" text="Fecha Nacimiento:" GridPane.columnIndex="1" GridPane.rowIndex="9" GridPane.valignment="TOP">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="txtTelefono" layoutX="20.0" layoutY="101.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" promptText="2721596284" style="-fx-background-color: FFF; -fx-border-color: a8a8a8;" GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.valignment="BOTTOM">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets left="3.0" />
+                                                   </padding>
+                                                </TextField>
+                                                <DatePicker fx:id="dteFeNacimiento" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" promptText="Seleccione fecha..." style="-fx-background-color: FFF; -fx-border-color: #a8a8a8;" GridPane.columnIndex="1" GridPane.rowIndex="9" GridPane.valignment="BOTTOM">
+                                                   <effect>
+                                                      <ColorAdjust />
+                                                   </effect>
+                                                </DatePicker>
+                                                <Label layoutX="20.0" layoutY="80.0" text="Teléfono:" GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.valignment="TOP">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Correo:" GridPane.columnIndex="3" GridPane.rowIndex="7" GridPane.valignment="TOP">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="txtCorreo" layoutX="20.0" layoutY="161.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" promptText="el.aventado@gmail.com" style="-fx-background-color: FFF; -fx-border-color: a8a8a8;" GridPane.columnIndex="3" GridPane.rowIndex="7" GridPane.valignment="BOTTOM">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets left="3.0" />
+                                                   </padding>
+                                                </TextField>
+                                                <Label layoutX="20.0" layoutY="80.0" text="Tipo de usuario:" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <ComboBox fx:id="cbxTipoUsuario" layoutX="20.0" layoutY="35.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" promptText="Seleccione un tipo..." style="-fx-background-color: FFF; -fx-border-color: a8a8a8; -fx-padding: 0px;" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                                                <Label layoutX="20.0" layoutY="140.0" text="Sexo:" GridPane.columnIndex="3" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <ComboBox fx:id="cbxSexo" layoutX="20.0" layoutY="41.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" promptText="Seleccionar..." style="-fx-background-color: FFF; -fx-border-color: a8a8a8; -fx-padding: 0px;" GridPane.columnIndex="3" GridPane.rowIndex="5" GridPane.valignment="BOTTOM" />
+                                                <Label layoutX="20.0" layoutY="260.0" text="Foto:" GridPane.columnIndex="3" GridPane.rowIndex="9" GridPane.valignment="TOP">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button fx:id="btnElegirFoto" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="30.0" style="-fx-background-color: FFF; -fx-border-color: a8a8a8;" text="Añadir una foto..." GridPane.columnIndex="3" GridPane.rowIndex="9" GridPane.valignment="BOTTOM">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets left="3.0" />
+                                                   </padding>
+                                                </Button>
+                                                <TextField fx:id="txtIdUsuario" layoutX="20.0" layoutY="101.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" style="-fx-background-color: FFF; -fx-border-color: a8a8a8;" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets left="3.0" />
+                                                   </padding>
+                                                </TextField>
+                                                <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#btnRegistrarUsuario" prefHeight="40.0" style="-fx-background-color: #1A1A1A; -fx-border-color: #FFF; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Registrar" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="12">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button fx:id="btnGenerarCedula" alignment="CENTER" layoutX="182.0" layoutY="323.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#btnGenerarCredencial" prefHeight="40.0" style="-fx-background-color: #FFF700; -fx-border-color: #FFF; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Generar Cédula" textAlignment="CENTER" textFill="#1a1a1a" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </GridPane>
+                                       </content>
+                                       <font>
+                                          <Font name="Arial Bold" size="16.0" />
+                                       </font>
+                                  </TitledPane>
+                                  <TitledPane fx:id="panePlan" style="-fx-label-padding: 3px;" text="Plan" underline="true">
+                                       <font>
+                                          <Font name="Arial Bold" size="16.0" />
+                                       </font>
+                                       <content>
+                                          <GridPane style="-fx-background-color: #F6F6F6;">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="10.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="10.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="45.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="45.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="45.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="42.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="10.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label text="Fecha Inicio:" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="20.0" layoutY="20.0" text="Fecha Fin:" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="20.0" layoutY="20.0" text="Tiempo Restante:" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField layoutX="20.0" layoutY="41.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="24.0" promptText="16 Días" style="-fx-background-color: FFF; -fx-border-color: a8a8a8;" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets left="3.0" />
+                                                   </padding>
+                                                </TextField>
+                                                <DatePicker maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="24.0" promptText="16/06/2022" style="-fx-background-color: FFF; -fx-border-color: #a8a8a8;" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                                                   <effect>
+                                                      <ColorAdjust />
+                                                   </effect>
+                                                </DatePicker>
+                                                <Label layoutX="20.0" layoutY="80.0" text="Tipo de plan:" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="20.0" layoutY="140.0" text="Instructor asignado:" GridPane.columnIndex="3" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <ComboBox layoutX="20.0" layoutY="41.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="24.0" promptText="Seleccionar..." style="-fx-background-color: FFF; -fx-border-color: a8a8a8;" GridPane.columnIndex="3" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
+                                                   <padding>
+                                                      <Insets left="3.0" />
+                                                   </padding>
+                                                </ComboBox>
+                                                <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" style="-fx-background-color: #1A1A1A; -fx-border-color: #FFF; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Volver" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                </Button>
+                                                <DatePicker layoutX="20.0" layoutY="281.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="24.0" promptText="16/04/2022" style="-fx-background-color: FFF; -fx-border-color: #a8a8a8;" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                                                   <effect>
+                                                      <ColorAdjust />
+                                                   </effect>
+                                                </DatePicker>
+                                                <Label layoutX="20.0" layoutY="20.0" text="Tipo de periodo:" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField maxHeight="-Infinity" minHeight="-Infinity" prefHeight="24.0" promptText="Básico" style="-fx-background-color: FFF; -fx-border-color: a8a8a8;" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets left="3.0" />
+                                                   </padding>
+                                                </TextField>
+                                                <TextField maxHeight="-Infinity" minHeight="-Infinity" prefHeight="24.0" promptText="Mensual" style="-fx-background-color: FFF; -fx-border-color: a8a8a8;" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                                                   <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets left="3.0" />
+                                                   </padding>
+                                                </TextField>
+                                             </children>
+                                          </GridPane>
+                                       </content>
+                                  </TitledPane>
+                                </panes>
+                              </Accordion>
+                           </children>
+                                </GridPane>
+                            </content>
+                        </Tab>
+                        <Tab closable="false" text="Planes">
+                            <content>
+                                <GridPane style="-fx-background-color: #FFFBBC;">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                </GridPane>
+                            </content>
+                        </Tab>
+                  <Tab text="Inscripciones">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                     <content>
+                        <GridPane style="-fx-background-color: #DBFAFF;">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </Tab>
+                    </tabs>
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+                </TabPane>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>
