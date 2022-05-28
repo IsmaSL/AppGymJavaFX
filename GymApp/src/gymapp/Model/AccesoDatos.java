@@ -60,7 +60,6 @@ public class AccesoDatos implements Serializable {
             Class.forName(sDriver).newInstance();
             oConexion = DriverManager.getConnection(sUrl, sUsr, sPwd);
             bRet = true;
-            // hayConexion = true;
         } catch (SQLException e) {
             System.out.print(e);
         }
