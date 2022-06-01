@@ -6,19 +6,26 @@
 
 package gymapp.Model.FactoryMethod;
 
+import gymapp.Model.DAO.DAOClientes;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
- * @author IsmaSL
+ * 
  */
 public class Cliente extends Usuario {
 
     private String fechaNac;
     private String urlFoto;
 
-    public Cliente(String id_user, String nombre, String apPaterno, 
+    public Cliente(){
+        
+    }
+    
+    public Cliente(int id_user, String nombre, String apPaterno, 
                    String apMaterno, String sexo, String telefono, 
                    String correo, String fechaNac, String urlFoto) {
         super(id_user, nombre, apPaterno, apMaterno, sexo, telefono, correo);
@@ -33,7 +40,13 @@ public class Cliente extends Usuario {
 
     @Override
     public boolean registrarUsuario() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        DAOClientes DaoClientes = new DAOClientes();
+        try {
+            return DaoClientes.addClientes(this);
+        } catch (Exception ex) {
+            Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
     }
 
     @Override

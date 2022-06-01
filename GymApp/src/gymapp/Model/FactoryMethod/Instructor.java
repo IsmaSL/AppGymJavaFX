@@ -7,6 +7,8 @@
 package gymapp.Model.FactoryMethod;
 
 import gymapp.Model.AccesoDatos;
+import gymapp.Model.DAO.DAOClientes;
+import gymapp.Model.DAO.DAOInstructores;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -16,7 +18,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author IsmaSL
+ * @author Lissete Rosete Rosas
  */
 public class Instructor extends Usuario {
     
@@ -24,12 +26,16 @@ public class Instructor extends Usuario {
     private String area;
     AccesoDatos oAD;
     
-    public Instructor(String id_user, String nombre, String apPaterno, 
+    public Instructor(int id_user, String nombre, String apPaterno, 
                       String apMaterno, String sexo, String telefono, 
                       String correo, String turno, String area) {
         super(id_user, nombre, apPaterno, apMaterno, sexo, telefono, correo);
         this.turno = turno;
         this.area = area;
+    }
+
+    public Instructor() {
+        
     }
 
     @Override
@@ -39,32 +45,13 @@ public class Instructor extends Usuario {
 
     @Override
     public boolean registrarUsuario() {
-        boolean userAdd = false;
-        int rs;
-        
+        DAOInstructores DaoInstructores = new DAOInstructores();
         try {
-            oAD = new AccesoDatos();
+            return DaoInstructores.addInstructor(this);
         } catch (Exception ex) {
-            System.out.println("ERROR: " + ex);
+            Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        String sQuery = "INSERT INTO ...;";
-        
-        try {
-            if (oAD.conectar()) {
-                rs = oAD.ejecutarComando(sQuery);
-                oAD.desconectar();
-                if(rs >= 1){
-                    userAdd = true;
-                }
-            }
-        } catch (SQLException e) {
-            System.out.println("PGSQL_ERROR: " + e.getMessage());
-        } catch (Exception ex) {
-            System.out.println("ERROR: " + ex);
-        }
-        
-        return userAdd;
+        return false;
     }
 
     @Override

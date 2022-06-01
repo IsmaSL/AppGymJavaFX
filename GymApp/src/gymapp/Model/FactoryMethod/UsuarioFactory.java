@@ -8,7 +8,7 @@ package gymapp.Model.FactoryMethod;
 
 /**
  *
- * @author IsmaSL
+ * @author 
  */
 public class UsuarioFactory implements UsuarioFactoryMethod {
 
@@ -16,12 +16,12 @@ public class UsuarioFactory implements UsuarioFactoryMethod {
     public Usuario createUsuario(String tipo, String id, String nombre, String apPaterno, 
                                  String apMaterno, String sexo, String telefono, 
                                  String correo, String fec_tur, String url_area) {
-        
+
         if(tipo.equals("Cliente")) {
-            return new Cliente(id, nombre, apPaterno, apMaterno, sexo, 
+            return new Cliente(Integer.parseInt(id), nombre, apPaterno, apMaterno, sexo, 
                                telefono, correo, fec_tur, url_area);
         } else {
-            return new Instructor(id, nombre, apPaterno, apMaterno, sexo, 
+            return new Instructor(Integer.parseInt(id), nombre, apPaterno, apMaterno, sexo, 
                                   telefono, correo, fec_tur, url_area);
         }
     }

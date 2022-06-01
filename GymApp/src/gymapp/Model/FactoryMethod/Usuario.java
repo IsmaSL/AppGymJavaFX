@@ -10,10 +10,9 @@ import java.util.ArrayList;
 
 /**
  *
- * @author IsmaSL
  */
 public abstract class Usuario {
-    private String id_user;
+    private int id_user;
     private String nombre;
     private String apPaterno;
     private String apMaterno;
@@ -21,7 +20,11 @@ public abstract class Usuario {
     private String telefono;
     private String correo;
 
-    public Usuario(String id_user, String nombre, String apPaterno, 
+    public Usuario(){
+        
+    }
+    
+    public Usuario(int id_user, String nombre, String apPaterno, 
                    String apMaterno, String sexo, String telefono, 
                    String correo) {
         this.id_user = id_user;
@@ -43,11 +46,11 @@ public abstract class Usuario {
     
     public abstract boolean eliminarUsuario();
 
-    public String getId_user() {
+    public int getId_user() {
         return id_user;
     }
 
-    public void setId_user(String id_user) {
+    public void setId_user(int id_user) {
         this.id_user = id_user;
     }
 

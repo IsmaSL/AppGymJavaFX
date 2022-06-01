@@ -80,14 +80,14 @@
                                         <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="15.0" vgrow="SOMETIMES" />
                                     </rowConstraints>
                            <children>
-                              <TableView prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFF; -fx-border-color: #5e5e5e; -fx-border-width: 1px; -fx-padding: 3px;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                              <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFF; -fx-border-color: #5e5e5e; -fx-border-width: 1px; -fx-padding: 3px;" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                 <columns>
-                                  <TableColumn maxWidth="50.0" minWidth="50.0" prefWidth="50.0" resizable="false" text="ID" />
-                                  <TableColumn maxWidth="140.0" minWidth="140.0" prefWidth="140.0" resizable="false" text="Nombre(s)" />
-                                    <TableColumn maxWidth="140.0" minWidth="140.0" prefWidth="140.0" text="Apellido Paterno" />
-                                    <TableColumn maxWidth="140.0" minWidth="140.0" prefWidth="140.0" text="Apellido Materno" />
-                                    <TableColumn maxWidth="90.0" minWidth="90.0" prefWidth="90.0" text="F. Inscripción" />
-                                    <TableColumn maxWidth="80.0" minWidth="80.0" text="Estado" />
+                                  <TableColumn fx:id="id_cliente" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" resizable="false" text="ID" />
+                                  <TableColumn fx:id="nombre" maxWidth="140.0" minWidth="140.0" prefWidth="140.0" resizable="false" text="Nombre(s)" />
+                                    <TableColumn fx:id="ap_paterno" maxWidth="140.0" minWidth="140.0" prefWidth="140.0" text="Apellido Paterno" />
+                                    <TableColumn fx:id="ap_materno" maxWidth="140.0" minWidth="140.0" prefWidth="140.0" text="Apellido Materno" />
+                                    <TableColumn fx:id="inscripcion" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" text="Correo" />
+                                    <TableColumn fx:id="telefono" maxWidth="80.0" minWidth="80.0" text="Telefono" />
                                 </columns>
                               </TableView>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -102,12 +102,21 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#btnMostrarAgregar" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: #1A1A1A; -fx-border-color: #FFF; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Agregar" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                                    <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnMostrarAgregar" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: #1A1A1A; -fx-border-color: #FFF; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Agregar" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="2">
                                        <font>
                                           <Font name="Arial" size="16.0" />
                                        </font>
                                     </Button>
-                                    <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: #1A1A1A; -fx-border-color: #FFF; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Refrescar" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#Pruebitachida" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: #1A1A1A; -fx-border-color: #FFF; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Refrescar" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Arial" size="16.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                    </Button>
+                                  
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#Pruebitachida2" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: #1A1A1A; -fx-border-color: #FFF; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Suscripciones" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="LEFT" GridPane.valignment="TOP" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Arial" size="16.0" />
                                        </font>
@@ -262,15 +271,15 @@
                                                       <Insets left="3.0" />
                                                    </padding>
                                                 </Button>
-                                                <TextField fx:id="txtIdUsuario" layoutX="20.0" layoutY="101.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" style="-fx-background-color: FFF; -fx-border-color: a8a8a8;" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                                                <!--<TextField fx:id="txtIdUsuario" layoutX="20.0" layoutY="101.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" style="-fx-background-color: FFF; -fx-border-color: a8a8a8;" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                                                    <font>
                                                       <Font name="Arial" size="14.0" />
                                                    </font>
                                                    <padding>
                                                       <Insets left="3.0" />
                                                    </padding>
-                                                </TextField>
-                                                <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#btnRegistrarUsuario" prefHeight="40.0" style="-fx-background-color: #1A1A1A; -fx-border-color: #FFF; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Registrar" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="12">
+                                                </TextField>-->
+                                                <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnRegistrarUsuario" prefHeight="40.0" style="-fx-background-color: #1A1A1A; -fx-border-color: #FFF; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Registrar" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="12">
                                                    <font>
                                                       <Font name="Arial" size="16.0" />
                                                    </font>
