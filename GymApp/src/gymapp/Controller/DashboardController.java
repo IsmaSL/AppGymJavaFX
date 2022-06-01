@@ -142,12 +142,12 @@ public class DashboardController implements Initializable {
     }
     
     @FXML
-    private void Pruebitachida(javafx.event.ActionEvent event) throws Exception {
+    private void btnActualizar(javafx.event.ActionEvent event) throws Exception {
         Actualizar();
     }
     
     @FXML
-    private void Pruebitachida2(javafx.event.ActionEvent event) throws Exception {
+    private void btnSuscripciones(javafx.event.ActionEvent event) throws Exception {
         ControlState Controlito = new ControlState();
         String Mensaje = Controlito.ConsultStatus();
         System.out.println(Mensaje);

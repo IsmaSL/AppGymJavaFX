@@ -107,7 +107,7 @@
                                           <Font name="Arial" size="16.0" />
                                        </font>
                                     </Button>
-                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#Pruebitachida" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: #1A1A1A; -fx-border-color: #FFF; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Refrescar" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnActualizar" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: #1A1A1A; -fx-border-color: #FFF; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Refrescar" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Arial" size="16.0" />
                                        </font>
@@ -116,7 +116,7 @@
                                        </GridPane.margin>
                                     </Button>
                                   
-                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#Pruebitachida2" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: #1A1A1A; -fx-border-color: #FFF; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Suscripciones" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="LEFT" GridPane.valignment="TOP" GridPane.rowIndex="4">
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#btnSuscripciones" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: #1A1A1A; -fx-border-color: #FFF; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Suscripciones" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="LEFT" GridPane.valignment="TOP" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Arial" size="16.0" />
                                        </font>
